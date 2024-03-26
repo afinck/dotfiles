@@ -1,4 +1,4 @@
-- name: "pacman -Syu" as a separate step
+- name: "pacman -Syu as a separate step"
   pacman:
     update_cache: yes
     upgrade: yes
@@ -37,4 +37,10 @@
     owner: "{{ home_user }}"   
     group: "{{ home_user }}"   
 
+- name: copy wallpapers
+  copy:
+    src: files/backgrounds/*
+    dest: "/home/{{ home_user }}/.config/backgrounds/"
+    owner: "{{ home_user }}"   
+    group: "{{ home_user }}"   
 
