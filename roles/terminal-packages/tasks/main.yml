@@ -2,7 +2,7 @@
   package:
     name: "{{ item }}"
     state: present
-  with_lines: cat files/packages.txt 
+  loop: "{{ lookup('file', 'files/packages.txt').splitlines() }}"
     
     #- name: install eza
     #  package:
