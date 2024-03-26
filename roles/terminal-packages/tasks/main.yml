@@ -1,4 +1,4 @@
-- name: "pacman -Syu" as a separate step
+- name: "pacman -Syu as a separate step"
   pacman:
     update_cache: yes
     upgrade: yes
