@@ -1,4 +1,4 @@
-- name: Run the equivalent of "pacman -Syu" as a separate step
+- name: "pacman -Syu" as a separate step
   pacman:
     update_cache: yes
     upgrade: yes
@@ -8,23 +8,3 @@
     name: "{{ item }}"
     state: present
   loop: "{{ lookup('file', 'files/packages.txt').splitlines() }}"
-    
-    #- name: install eza
-    #  package:
-    #    name: "eza"
-    #    state: present
-    #
-    #- name: install yazi
-    #  package:
-    #    name: "yazi"
-    #    state: present
-    #
-    #- name: install zoxide
-    #  package:
-    #    name: "zoxide"
-    #    state: present
-    #
-    #- name: install starship
-    #  package:
-    #    name: "starship"
-    #    state: present

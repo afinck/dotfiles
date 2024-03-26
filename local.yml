@@ -3,7 +3,11 @@
   connection: local
   become: true
   roles:
-    #  - users
+    - users
     - write-dotfiles
     - terminal-packages
+    - hyperland
+    - terminal
+    - waybar
+    - greetd
 

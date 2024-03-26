@@ -1,0 +1,17 @@
+- name: Copy waybar config
+  copy:
+    src: files/config.jsonc
+    dest: "/home/{{ home_user }}/.config/waybar/config.jsonc"
+    owner: "{{ home_user }}"
+    group: "{{ home_user }}"
+    mode: 0644
+
+- name: Copy waybar style
+  copy:
+    src: files/style.css
+    dest: "/home/{{ home_user }}/.config/waybar/style.css"
+    owner: "{{ home_user }}"
+    group: "{{ home_user }}"
+    mode: 0644
+
+

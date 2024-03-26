@@ -1,0 +1,12 @@
+- name: copy greetd config
+  copy:
+    src: files/config.toml
+    dest: "/home/{{ home_user }}/.config/greetd/config.toml"
+    owner: "{{ home_user }}"
+    group: "{{ home_user }}"
+    mode: 0644
+
+- name: Run greetd as service
+  systemd:
+    state: started
+    name: greetd
