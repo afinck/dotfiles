@@ -1,0 +1,12 @@
+- name: add ansible user
+  user:
+    name: sauron
+    system: yes
+
+- name: set sudo for ansible user
+  copy:
+    src: files/sudo_sauron
+    dest: /etc/sudoers.d/sauron
+    owner: root
+    group: root
+    mode: 0440
