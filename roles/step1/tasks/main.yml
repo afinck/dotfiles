@@ -1,0 +1,14 @@
+- name: Writing bashrc
+  template: 
+    src: bashrc.j2 
+    dest: /home/"{{ home_user }}"/.bashrc
+    owner: "{{ home_user }}"
+    group: "{{ home_user }}"
+    mode: 0644
+
+- name: Writing aliases
+  template: 
+    src: aliases.j2
+    dest: /home/"{{ home_user }}"/.aliases
+    group: "{{ home_user }}"
+    mode: 0644

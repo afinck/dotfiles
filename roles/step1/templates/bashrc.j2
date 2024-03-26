@@ -1,0 +1,42 @@
+#
+# ~/.bashrc
+# 
+# globstar        If set, the pattern ** used in a filename expansion con‐
+#                 text will match a files and zero or more directories and
+#                 subdirectories.  If the pattern is followed by a /, only
+#                 directories and subdirectories match.
+ shopt -s globstar
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# stop foot from confusing ssh sessions
+if [[ $TERM = "foot" ]]; then
+  alias ssh='TERM=linux ssh'
+fi
+
+[[ -x ~/.aliases ]]; source ~/.aliases
+
+PS1='[\u@\h \W]\$ '
+
+export EDITOR=nvim
+
+nitch
+
+function goo ()
+{
+    echo "Googling: $@";
+    w3m "www.google.com/search?q=$*" $@
+}
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+eval "$(zoxide init bash)"
+eval "$(starship init bash)"
