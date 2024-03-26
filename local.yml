@@ -2,9 +2,6 @@
 - hosts: localhost
   connection: local
   become_user: "{{home_user}}"
-
-  tasks:
-  - name: deployment
-    roles:
-      - name: step1
+  roles:
+    - step1 
 
