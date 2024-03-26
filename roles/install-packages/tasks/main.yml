@@ -1,0 +1,9 @@
+- name: install eza
+  package:
+    name: "eza"
+    state: present
+
+- name: install yazi
+  package:
+    name: "yazi"
+    state: present

@@ -3,5 +3,6 @@
   connection: local
   become_user: "{{home_user}}"
   roles:
-    - step1 
+    - write-dotfiles
+    - install-packages
 
