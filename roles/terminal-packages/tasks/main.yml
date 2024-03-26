@@ -1,6 +1,6 @@
 - name: install missing packages
   vars_files: 
-    - ../default/packages.txt
+    - "../default/packages.txt"
   package:
     name: "{{ name }}"
   loop: "{{ item }}"
