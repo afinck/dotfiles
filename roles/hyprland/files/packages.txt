@@ -1,4 +1,3 @@
-actkbd
 alsa-utils
 chrony
 compface
@@ -14,7 +13,6 @@ mako
 pavucontrol
 poppler
 swaylock
-swww
 thunar
 tumbler
 unzip

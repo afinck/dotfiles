@@ -1,9 +1,9 @@
 - name: copy greetd config
   copy:
     src: files/config.toml
-    dest: "/home/{{ home_user }}/.config/greetd/config.toml"
-    owner: "{{ home_user }}"
-    group: "{{ home_user }}"
+    dest: "/home/andreas/.config/greetd/config.toml"
+    owner: andreas
+    group: andreas
     mode: 0644
 
 - name: Run greetd as service
