@@ -2,7 +2,7 @@
   package:
     name: "{{ item }}"
     state: present
-  with_lines: cat "../files/packages.txt" 
+  with_lines: cat files/packages.txt 
     
     #- name: install eza
     #  package:
