@@ -1,7 +1,7 @@
 - name: copy greetd config
   copy:
     src: files/config.toml
-    dest: "/home/andreas/.config/greetd/config.toml"
+    dest: "/home/andreas/.config/greetd/"
     owner: andreas
     group: andreas
     mode: 0644
