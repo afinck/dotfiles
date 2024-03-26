@@ -1,4 +1,6 @@
 - name: install missing packages
+  become: yes
+  become_user: sauron
   package:
     name: "{{ item }}"
     state: present
