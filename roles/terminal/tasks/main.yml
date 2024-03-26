@@ -1,7 +1,7 @@
 - name: copy terminal emulator config
   copy:
     src: files/foot.ini
-    dest: "/home/andreas/.config/foot/foot.ini"
+    dest: "/home/andreas/.config/foot/"
     owner: andreas
     group: andreas
     mode: 0644

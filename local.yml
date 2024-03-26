@@ -7,7 +7,7 @@
     #- write-dotfiles
     #- terminal-packages
     - hyprland
-      #- terminal
+    - terminal
     - waybar
     - greetd
 

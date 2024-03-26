@@ -1,7 +1,7 @@
 - name: Copy waybar config
   copy:
     src: files/config.jsonc
-    dest: "/home/andreas/.config/waybar/config.jsonc"
+    dest: "/home/andreas/.config/waybar/"
     owner: andreas
     group: andreas
     mode: 0644
@@ -9,7 +9,7 @@
 - name: Copy waybar style
   copy:
     src: files/style.css
-    dest: "/home/andreas/.config/waybar/style.css"
+    dest: "/home/andreas/.config/waybar/"
     owner: andreas
     group: andreas
     mode: 0644
