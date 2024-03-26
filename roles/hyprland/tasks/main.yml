@@ -20,28 +20,28 @@
 - name: copy vol.sh
   copy:
     src: files/vol.sh
-    dest: "/home/andreas/config/hypr/sh/vol.sh"
+    dest: "/home/andreas/config/hypr/sh/"
     owner: andreas   
     group: andreas
 
 - name: copy toogle_waybar
   copy:
     src: files/toogle_waybar.sh
-    dest: "/home/andreas/.config/hypr/sh/toogle_waybar.sh"
+    dest: "/home/andreas/.config/hypr/sh/"
     owner: andreas   
     group: andreas   
 
 - name: copy set wallpaper
   copy:
     src: files/set-wallpaper.sh
-    dest: "/home/andreas/.config/hypr/sh/set-wallpaper.sh"
+    dest: "/home/andreas/.config/hypr/sh/"
     owner: andreas   
     group: andreas   
 
 - name: copy wallpapers
   copy:
-    src: files/backgrounds/*
-    dest: "/home/andreas/.config/backgrounds/"
+    src: files/backgrounds
+    dest: "/home/andreas/.config/"
     owner: andreas   
     group: andreas   
 
