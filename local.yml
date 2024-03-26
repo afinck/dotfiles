@@ -1,9 +1,9 @@
 ---
 - hosts: localhost
   connection: local
-  become: true
+  become_user: sauron
   roles:
     - users
     - write-dotfiles
-    - install-packages
+    - terminal-packages
 

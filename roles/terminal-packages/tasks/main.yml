@@ -1,0 +1,24 @@
+- name: install missing packages
+  package:
+    name: "{{ name }}"
+  loop: "packages.txt"
+    
+    #- name: install eza
+    #  package:
+    #    name: "eza"
+    #    state: present
+    #
+    #- name: install yazi
+    #  package:
+    #    name: "yazi"
+    #    state: present
+    #
+    #- name: install zoxide
+    #  package:
+    #    name: "zoxide"
+    #    state: present
+    #
+    #- name: install starship
+    #  package:
+    #    name: "starship"
+    #    state: present
