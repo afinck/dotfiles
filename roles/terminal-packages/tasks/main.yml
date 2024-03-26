@@ -1,9 +1,7 @@
 - name: install missing packages
-  vars_files: 
-    - "../default/packages.txt"
   package:
     name: "{{ name }}"
-  loop: "{{ item }}"
+  with_lines: cat files/packages.txt 
     
     #- name: install eza
     #  package:
