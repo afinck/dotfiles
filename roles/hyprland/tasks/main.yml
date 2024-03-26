@@ -20,13 +20,13 @@
 - name: copy vol.sh
   copy:
     src: files/vol.sh
-    dest: "/home/andreas/config/hypr/sh/"
+    dest: "/home/andreas/.config/hypr/sh/"
     owner: andreas   
     group: andreas
 
-- name: copy toogle_waybar
+- name: copy toggle_waybar
   copy:
-    src: files/toogle_waybar.sh
+    src: files/toggle_waybar.sh
     dest: "/home/andreas/.config/hypr/sh/"
     owner: andreas   
     group: andreas   
