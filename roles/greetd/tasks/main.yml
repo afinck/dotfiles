@@ -10,4 +10,4 @@
   systemd:
     state: started
     name: greetd
-    enable: true
+    enabled: true
