@@ -6,7 +6,7 @@
 - name: Install Yazi flavors
   ansible.builtin.git:
     repo: "https://github.com/yazi-rs/flavors.git"
-    dest: /home/andreas/.config/yazi/
+    dest: /home/andreas/.config/yazi/flavors/
 
 - name: Copy Yazi.toml
   copy:
