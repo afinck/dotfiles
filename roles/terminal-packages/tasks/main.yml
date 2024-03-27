@@ -12,5 +12,5 @@
 - name: Install NvChad Neovim 
   ansible.builtin.git:
     repo: "https://github.com/NvChad/starter.git"
-    dest: /tmp/
+    dest: /tmp/nvim/
     separate_git_dir: /home/andreas/.config/nvim/
