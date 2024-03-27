@@ -7,4 +7,4 @@
 
 - name: Print the var
   ansible.builtin.debug:
-    var: {{ home_dir }}
+    msg: {{ home_dir }}
