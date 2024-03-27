@@ -3,6 +3,11 @@
     repo: "https://github.com/catppuccin/yazi.git"
     dest: /home/andreas/.config/yazi/
 
+- name: Install Yazi flavors
+  ansible.builtin.git:
+    repo: "https://github.com/yazi-rs/flavors.git"
+    dest: /home/andreas/.config/yazi/
+
 - name: Copy Yazi.toml
   copy:
     src: files/
