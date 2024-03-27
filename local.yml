@@ -4,12 +4,11 @@
   connection: local
 
   roles:
-    - getfacts
-    #- users
-    #- write-dotfiles
+    - users
+    - write-dotfiles
     - terminal-packages
-    #- hyprland
-    #- terminal
-    #- waybar
-    #- greetd
+    - hyprland
+    - terminal
+    - waybar
+    - greetd
 
