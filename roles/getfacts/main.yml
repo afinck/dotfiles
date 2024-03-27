@@ -1,0 +1,6 @@
+---
+- name: get running ansible user
+  ansible.builtin.set_fact:
+    home_dir: "{{ lookup('env', 'HOME') }}"
+    delegate_to: localhost
+    cacheable: yes
