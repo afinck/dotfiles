@@ -1,5 +1,12 @@
 ---
 - all:
+    hosts:
+      erde
+      mars
+      jupiter
+      saturn
+      pluto
+      uranus
     vars:
       home_user: andreas
       become_user: sauron
