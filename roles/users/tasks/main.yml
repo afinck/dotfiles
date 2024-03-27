@@ -1,9 +1,11 @@
 - name: add ansible user
+  become: true
   user:
     name: sauron
     system: yes
 
 - name: set sudo for ansible user
+  become: true
   copy:
     src: files/sudo_sauron
     dest: /etc/sudoers.d/sauron

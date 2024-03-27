@@ -1,9 +1,11 @@
 - name: "pacman -Syu as a separate step"
+  become: true
   pacman:
     update_cache: yes
     upgrade: no
 
 - name: install missing packages
+  become: true
   package:
     name: "{{ item }}"
     state: present

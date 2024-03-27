@@ -2,9 +2,6 @@
 
 - hosts: localhost
   connection: local
-  vars:
-     home_user: andreas
-     become_user: sauron
 
   roles:
     - getfacts
