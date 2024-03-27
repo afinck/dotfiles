@@ -1,0 +1,37 @@
+# yazi.toml
+[manager]
+sort_by = "natural"
+linemode = "mtime"
+ratio = [1, 3, 4]
+sort_dir_first = true
+
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
+]
+
+[open]
+rules = [
+  { mime = "application/pdf", use = "pdf" },
+  { mime = "application/zip", use = "zip" },
+  { mime = "image/*", use = "image" },
+  { mime = "text/*", use = "text" },
+  { mime = "*/*", use = "text" },
+]
+
+[opener]
+archive = [
+	{ run = 'unar "$1"', desc = "Extract here" },
+]
+text = [
+	{ run = 'nvim "$@"', block = true },
+]
+pdf = [
+	{ run = 'zathura "$@"', block = true },
+]
+image = [
+	{ run = 'nsxiv "$@"', block = true },
+]
+zip = [
+	{ run = 'unzip "$@"', block = true },
+]

@@ -4,11 +4,12 @@
   connection: local
 
   roles:
-    - users
-    - write-dotfiles
-    - terminal-packages
-    - hyprland
-    - terminal
-    - waybar
-    - greetd
+    #  - users
+    #  - write-dotfiles
+    #  - terminal-packages
+    #  - hyprland
+    #  - terminal
+    #  - waybar
+    #  - greetd
+    - yazi
 
