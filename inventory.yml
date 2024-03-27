@@ -1,0 +1,7 @@
+---
+- all:
+    vars:
+      home_user: andreas
+      become_user: sauron
+      conf_path: "/home/andreas/.config/"
+      #vault_password_file = ~/.vault_pass.txt

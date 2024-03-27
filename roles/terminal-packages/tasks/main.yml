@@ -8,3 +8,10 @@
     name: "{{ item }}"
     state: present
   loop: "{{ lookup('file', 'files/packages.txt').splitlines() }}"
+
+- name: Install NvChad Neovim 
+  ansible.builtin.git:
+    repo: "https://github.com/NvChad/NvChad.git"
+    dest: /home/andreas/.config/
+    version: v2.5
+

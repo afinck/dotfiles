@@ -3,9 +3,9 @@
   connection: local
   become: true
   roles:
-    #   - users
-    #- write-dotfiles
-    #- terminal-packages
+    - users
+    - write-dotfiles
+    - terminal-packages
     - hyprland
     - terminal
     - waybar
