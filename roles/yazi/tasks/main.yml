@@ -1,11 +1,11 @@
-- name: Copy Yazi.toml
-  copy:
-    src: files/
-    dest: /home/andreas/.config/yazi/
-
 - name: Install Yazi catppuccin themes
   ansible.builtin.git:
     repo: "https://github.com/catppuccin/yazi.git"
+    dest: /home/andreas/.config/yazi/
+
+- name: Copy Yazi.toml
+  copy:
+    src: files/
     dest: /home/andreas/.config/yazi/
 
 - name: Create a directory if it does not exist
