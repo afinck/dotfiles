@@ -49,7 +49,7 @@
 
 - name: confure mako
   copy:
-    src: files/conf
+    src: files/mako/config
     dest: "/home/andreas/.config/mako/"
     owner: andreas
     group: andreas
