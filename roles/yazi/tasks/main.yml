@@ -43,7 +43,7 @@
   ansible.builtin.git:
     repo: "https://github.com/NvChad/starter.git"
     dest: /home/andreas/.config/yazi/plugins/glow.yazi/
-h
+
 - name: Install Yazi Miller plugin (CSV viewer)
   ansible.builtin.git:
     repo: "https://github.com/Reledia/miller.yazi.git"
