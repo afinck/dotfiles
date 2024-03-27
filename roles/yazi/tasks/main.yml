@@ -62,15 +62,15 @@
 - name: Install Yazi Exifaudio plugin (Exif audio viewer)
   ansible.builtin.git:
     repo: "https://github.com/Sonico98/exifaudio.yazi.git"
-    dest: /home/andreas/.config/yazi/plugins/exifaudio-yazi/
+    dest: /home/andreas/.config/yazi/plugins/exifaudio.yazi/
       
 - name: Install Yazi Ouch plugin (Archive viewer)
   ansible.builtin.git:
     repo: "https://github.com/ndtoan96/ouch.yazi.git"
-    dest: /home/andreas/.config/yazi/plugins/ouch-yazi/
+    dest: /home/andreas/.config/yazi/plugins/ouch.yazi/
 
 - name: Install Yazi Starship plugin (nice icons etc.)
   ansible.builtin.git:
     repo: "https://github.com/Rolv-Apneseth/starship.yazi.git"
-    dest: /home/andreas/.config/yazi/plugins/starship-yazi/
+    dest: /home/andreas/.config/yazi/plugins/starship.yazi/
 
