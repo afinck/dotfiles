@@ -1,3 +1,15 @@
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /home/andreas/.config/yazi/plugins/smart-enter.yazi
+    state: directory
+    mode: '0755'
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /home/andreas/.config/yazi/plugins/arrow.yazi
+    state: directory
+    mode: '0755'
+      
 - name: copy Yazi plugin (Smart Enter)
   copy:
     src: templates/smart-enter.yazi/init.lua.j2
