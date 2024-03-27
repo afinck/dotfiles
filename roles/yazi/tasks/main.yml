@@ -46,7 +46,7 @@
 
 - name: Install Yazi Glow plugin (Markdown viewer)
   ansible.builtin.git:
-    repo: "https://github.com/NvChad/starter.git"
+    repo: "https://github.com/Reledia/glow.yazi.git"
     dest: /home/andreas/.config/yazi/plugins/glow.yazi/
 
 - name: Install Yazi Miller plugin (CSV viewer)
