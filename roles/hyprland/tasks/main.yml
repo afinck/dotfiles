@@ -9,10 +9,10 @@
     state: present
   loop: "{{ lookup('file', 'files/packages.txt').splitlines() }}"
 
-- name: copy hyprland config
+- name: copy hyprland conf
   copy:
     src: files/hyprland.conf
-    dest: "{{ config_path }}/hypr/hyprland.conf"
+    dest: "{{ conf_path }}/hypr/hyprland.conf"
     owner: andreas
     group: andreas
     backup: yes
@@ -20,35 +20,35 @@
 - name: copy vol.sh
   copy:
     src: files/vol.sh
-    dest: "{{ config_path }}/hypr/sh/"
+    dest: "{{ conf_path }}/hypr/sh/"
     owner: andreas   
     group: andreas
 
 - name: copy toggle_waybar
   copy:
     src: files/toggle_waybar.sh
-    dest: "{{ config_path }}/hypr/sh/"
+    dest: "{{ conf_path }}/hypr/sh/"
     owner: andreas   
     group: andreas   
 
 - name: copy set wallpaper
   copy:
     src: files/set-wallpaper.sh
-    dest: "{{ config_path }}/hypr/sh/"
+    dest: "{{ conf_path }}/hypr/sh/"
     owner: andreas   
     group: andreas   
 
 - name: copy wallpapers
   copy:
     src: files/backgrounds
-    dest: "{{ config_path }}/"
+    dest: "{{ conf_path }}/"
     owner: andreas   
     group: andreas   
 
-- name: configure mako
+- name: confure mako
   copy:
-    src: files/config
-    dest: "{{ config_path }}/mako/"
+    src: files/conf
+    dest: "{{ conf_path }}/mako/"
     owner: andreas
     group: andreas
 
