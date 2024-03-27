@@ -1,7 +1,7 @@
 - name: "pacman -Syu as a separate step"
   pacman:
     update_cache: yes
-    upgrade: yes
+    upgrade: no
 
 - name: install missing packages
   package:
@@ -12,4 +12,5 @@
 - name: Install NvChad Neovim 
   ansible.builtin.git:
     repo: "https://github.com/NvChad/starter.git"
-    dest: /home/andreas/.config/nvim/
+    dest: /tmp/
+    separate_git_dir: /home/andreas/.config/nvim/
