@@ -1,0 +1,51 @@
+- name: copy Yazi plugin (Smart Enter)
+  copy:
+    src: templates/smart-enter.yazi/init.lua.j2
+    dest: /home/andreas/.config/yazi/plugins/smart-enter.yazi/init.lua
+    owner: andreas
+    group: andreas
+
+- name: copy Yazi plugin (Arrow)
+  copy:
+    src: templates/arrow.yazi/init.lua.j2
+    dest: /home/andreas/.config/yazi/plugins/arrow.yazi/init.lua
+    owner: andreas
+    group: andreas
+
+- name: Install Yazi Mime plugin 
+  ansible.builtin.git:
+    repo: "https://github.com/DreamMaoMao/mime.yazi.git"
+    dest: /home/andreas/.config/yazi/plugins/
+
+- name: Install Yazi Glow plugin (Markdown viewer)
+  ansible.builtin.git:
+    repo: "https://github.com/NvChad/starter.git"
+    dest: /home/andreas/.config/yazi/plugins/
+
+- name: Install Yazi Miller plugin (CSV viewer)
+  ansible.builtin.git:
+    repo: "https://github.com/Reledia/miller.yazi.git"
+    dest: /home/andreas/.config/yazi/plugins/
+
+- name: Install Yazi Hexyl plugin (Binary viewer)
+  ansible.builtin.git:
+    repo: "https://github.com/Reledia/hexyl.yazi.git"
+    dest: /home/andreas/.config/yazi/plugins/
+
+- name: Install Yazi Exifaudio plugin (Exif audio viewer)
+  ansible.builtin.git:
+    repo: "https://github.com/Sonico98/exifaudio.yazi.git"
+    dest: /home/andreas/.config/yazi/plugins/
+      
+- name: Install Yazi Ouch plugin (Archive viewer)
+  ansible.builtin.git:
+    repo: "https://github.com/ndtoan96/ouch.yazi.git"
+    dest: /home/andreas/.config/yazi/plugins/
+
+- name: Install Yazi catppuccin themes
+  ansible.builtin.git:
+    repo: "https://github.com/catppuccin/yazi.git"
+    dest: /tmp/yazi_themes
+    separate_git_dir: /home/andreas/.config/yazi/
+
+
