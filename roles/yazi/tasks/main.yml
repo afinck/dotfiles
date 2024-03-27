@@ -1,3 +1,13 @@
+- name: Copy Yazi.toml
+  copy:
+    src: files/
+    dest: /home/andreas/.config/yazi/
+
+- name: Install Yazi catppuccin themes
+  ansible.builtin.git:
+    repo: "https://github.com/catppuccin/yazi.git"
+    dest: /home/andreas/.config/yazi/
+
 - name: Create a directory if it does not exist
   ansible.builtin.file:
     path: /home/andreas/.config/yazi/plugins/smart-enter.yazi
@@ -54,10 +64,5 @@
     repo: "https://github.com/ndtoan96/ouch.yazi.git"
     dest: /home/andreas/.config/yazi/plugins/
 
-- name: Install Yazi catppuccin themes
-  ansible.builtin.git:
-    repo: "https://github.com/catppuccin/yazi.git"
-    dest: /tmp/yazi_themes
-    separate_git_dir: /home/andreas/.config/yazi/
 
 
