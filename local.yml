@@ -2,7 +2,6 @@
 
 - hosts: localhost
   connection: local
-  become: true
   vars:
      home_user: andreas
      become_user: sauron
@@ -12,7 +11,7 @@
     #- users
     #- write-dotfiles
     - terminal-packages
-    - hyprland
+    #- hyprland
     #- terminal
     #- waybar
     #- greetd

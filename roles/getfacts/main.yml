@@ -4,3 +4,7 @@
     home_dir: "{{ lookup('env', 'HOME') }}"
     delegate_to: localhost
     cacheable: yes
+
+- name: Print the var
+  ansible.builtin.debug:
+    var: {{ home_dir }}
