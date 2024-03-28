@@ -58,11 +58,6 @@
   ansible.builtin.git:
     repo: "https://github.com/Reledia/hexyl.yazi.git"
     dest: /home/andreas/.config/yazi/plugins/hexyl.yazi/
-
-- name: Install Yazi Exifaudio plugin (Exif audio viewer)
-  ansible.builtin.git:
-    repo: "https://github.com/Sonico98/exifaudio.yazi.git"
-    dest: /home/andreas/.config/yazi/plugins/exifaudio.yazi/
       
 - name: Install Yazi Ouch plugin (Archive viewer)
   ansible.builtin.git:
