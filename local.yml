@@ -10,8 +10,8 @@
     #    - users
     #    - write-dotfiles
     #    - terminal-packages
-    #    - hyprland
-        - foot
+    - hyprland
+    #    - foot
     #    - waybar
     #    - greetd
     #    - yazi

@@ -21,13 +21,26 @@ base_packages:
   - wget
   - reflector
 
-xorg_packages:
-  - xorg
-  - xorg-apps
-  - xorg-drivers
-  - xorg-apps
-  - xorg-fonts
-  - xorg-xinit
+hyprland_packages:
+  - alsa-utils
+  - firefox
+  - foot
+  - greetd
+  - greetd-tuigreet
+  - grim
+  - gtkspell
+  - hyprland
+  - lxqt-policykit
+  - mako
+  - pavucontrol
+  - swaylock
+  - thunar
+  - tumbler
+  - waybar
+  - wl-clipboard
+  - wofi
+  - xdg-utils
+  - zathura-pdf-poppler
 
 gpu_packages:
   - mesa
