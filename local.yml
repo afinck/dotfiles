@@ -1,16 +1,18 @@
-- name: Configure host.
-  hosts: all
+---
+- hosts: localhost
+  connection: local
 
   vars_files:
     - default.config.yml
     - config.yml
 
   roles:
-    #- users
-      #  - write-dotfiles
-      #- terminal-packages
-      #- hyprland
-    - foot
-      #- waybar
-      #- greetd
-      #- yazi
+    #    - users
+    #    - write-dotfiles
+    #    - terminal-packages
+    #    - hyprland
+        - foot
+    #    - waybar
+    #    - greetd
+    #    - yazi
+
