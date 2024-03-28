@@ -1,0 +1,16 @@
+- name: Configure host.
+  hosts: all
+
+  vars_files:
+    - default.config.yml
+    - config.yml
+
+  roles:
+    #- users
+      #  - write-dotfiles
+      #- terminal-packages
+      #- hyprland
+    - foot
+      #- waybar
+      #- greetd
+      #- yazi
