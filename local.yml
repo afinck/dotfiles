@@ -10,7 +10,7 @@
     - aur-helper
     #    - users
     #    - shell
-    #    - base
+    - base
     # - hyprland
     #    - foot
     #    - waybar
