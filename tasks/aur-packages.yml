@@ -1,0 +1,7 @@
+---
+- name: Install other packages
+  become: true
+  kewlfft.aur.aur:
+    name: "{{ aur_packages }}"
+    use: yay
+    state: present

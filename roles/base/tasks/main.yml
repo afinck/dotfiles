@@ -12,3 +12,4 @@
     state: present
   changed_when: false
 
+- import_tasks: tasks/aur-packages
