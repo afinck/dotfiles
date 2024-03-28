@@ -7,9 +7,10 @@
     - config.yml
 
   roles:
+    - aur-helper
     #    - users
-    #    - write-dotfiles
-    #    - terminal-packages
+    #    - shell
+    #    - base
     - hyprland
     #    - foot
     #    - waybar

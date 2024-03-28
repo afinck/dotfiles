@@ -12,3 +12,8 @@
     dest: "/home/andreas/.aliases"
     group: andreas
     mode: 0644
+
+- name: Install NvChad Neovim 
+  ansible.builtin.git:
+    repo: "https://github.com/NvChad/starter.git"
+    dest: /home/andreas/.config/nvim/

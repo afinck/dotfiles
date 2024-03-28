@@ -1,0 +1,14 @@
+- name: Install base packages
+  become: true
+  community.general.pacman:
+    name: "{{ base_packages }}"
+    state: present
+  changed_when: false
+
+- name: install font packages
+  become: true
+  community.general.pacman:
+    name: "{{ font_packages }}"
+    state: present
+  changed_when: false
+

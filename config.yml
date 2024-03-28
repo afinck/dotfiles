@@ -4,22 +4,18 @@ swapfile_path: /swapfile
 swapfile_size: 8G
 
 base_packages:
-  - base
-  - base-devel
-  - linux
-  - linux-firmware
   - sudo
-  - dhcpcd
   - netctl
-  - networkmanager
   - openssh
-  - nano
-  - pipewire
   - man-db
   - man-pages
-  - git
+  - man-pages-de
   - wget
   - reflector
+  - pulseaudio
+  - update-grub
+  - git
+  - bash-completion
 
 hyprland_packages:
   - alsa-utils
@@ -42,66 +38,70 @@ hyprland_packages:
   - xdg-utils
   - zathura-pdf-poppler
 
-gpu_packages:
-  - mesa
-  - lib32-mesa
-  - xf86-video-amdgpu
-  - vulkan-radeon
-  - vulkan-headers
-  - lib32-vulkan-radeon
-  - amdvlk
-  - lib32-amdvlk
-  - libva-mesa-driver
-  - lib32-libva-mesa-driver
-  - mesa-vdpau
-  - lib32-mesa-vdpau
-
 font_packages:
   - ttf-ubuntu-font-family
   - noto-fonts
+  - noto-fonts-cjk
   - noto-fonts-emoji # for emoji
   - ttf-dejavu
   - ttf-roboto
   - adobe-source-han-sans-otc-fonts # for CJK
+  - ttf-firacode-nerd
+  - ttf-jetbrains-mono-nerd
+  - ttf-mplus-nerd
 
-gnome_packages:
-  - gnome
-  - gnome-tweaks
-  - gnome-shell-extensions
-  - gdm
+aur_packages:
+  - nitch
+  - swww
+  - actkbd
 
 other_packages:
-  - linux-headers
-  - bash-completion
+  - ripgrep
+  - rsync
+  - scdoc
+  - slurp
+  - starship
+  - tree
+  - unarchiver
+  - yazi
+  - zathura
+  - zoxide
+  - nsxiv
+  - w3m
+  - mosh
+  - ouch
+  - hexyl
+  - miller
+  - poppler
+  - blueman
+  - brightnessctl
+  - fd
+  - ffmpegthumbnailer
+  - fzf
+  - glow
+  - gvfs
+  - jq
+  - mpc
+  - mpd
   - mpv
+  - neovim
+  - chrony
+  - compface
   - mpv-mpris
   - aria2
   - yay
   - pass
-  - stow
-  - firefox
-  - google-chrome
-  - obsidian
   - spotify
   - spotify-adblock-git
-  - alacritty
   - yt-dlp
   - ntfs-3g
-  - gallery-dl
-  - neofetch
   - btop
   - geary
   - browserpass-firefox
   - browserpass-chromium
   - tmux
-  - cpupower
-  - turbostat
-  - acpi
   - bc
-  - update-grub
   - p7zip
-  - radeontop
-  - xclip
 
 services_list:
   - sshd
@@ -110,12 +110,3 @@ services_list:
 
 dev_packages:
   - visual-studio-code-bin
-  - python
-  - python-pip
-  - nodejs
-  - npm
-  - rust
-  - jre
-  - jdk
-  - go
-
