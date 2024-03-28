@@ -4,12 +4,6 @@
 #    update_cache: yes
 #    upgrade: yes
 #
-      #- name: install hyprland packages 
-      #  become: true
-      #  package:
-      #    name: "{{ item }}"
-      #    state: present
-      #  loop: "{{ lookup('file', 'files/packages.txt').splitlines() }}"
 
 - name: install hyprland packages 
   become: true
@@ -54,7 +48,7 @@
     owner: andreas   
     group: andreas   
 
-- name: confure mako
+- name: configure mako
   copy:
     src: files/mako/config
     dest: "/home/andreas/.config/mako/"
