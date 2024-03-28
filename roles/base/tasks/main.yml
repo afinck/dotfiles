@@ -12,4 +12,4 @@
     state: present
   changed_when: false
 
-- import_tasks: tasks/aur-packages
+- import_tasks: tasks/aur-packages.yml
