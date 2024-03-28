@@ -7,7 +7,7 @@
     - config.yml
 
   roles:
-    - aur-helper
+    - aur
     #    - users
     #    - shell
     - base

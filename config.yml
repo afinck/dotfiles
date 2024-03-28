@@ -13,7 +13,6 @@ base_packages:
   - wget
   - reflector
   - pulseaudio
-  - update-grub
   - git
   - bash-completion
 
