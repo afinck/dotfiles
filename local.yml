@@ -8,9 +8,9 @@
 
   roles:
     - aur
+    - base
     #    - users
     #    - shell
-    - base
     # - hyprland
     #    - foot
     #    - waybar
