@@ -1,71 +1,71 @@
 - name: Install Yazi catppuccin themes
   ansible.builtin.git:
     repo: "https://github.com/catppuccinyazi.git"
-    dest: {{ conf_path }}yazi/
+    dest: "{{ conf_path }}yazi/"
 
 - name: Install Yazi flavors
   ansible.builtin.git:
     repo: "https://github.comyazi-rs/flavors.git"
-    dest: {{ conf_path }}yazi/flavors/
+    dest: "{{ conf_path }}yazi/flavors/"
 
 - name: Copy Yazi.toml
   copy:
     src: files/
-    dest: {{ conf_path }}yazi/
+    dest: "{{ conf_path }}yazi/"
 
 - name: Create a directory if it does not exist
   ansible.builtin.file:
-    path: {{ conf_path }}yazi/plugins/smart-enter.yazi
+    path: "{{ conf_path }}yazi/plugins/smart-enter.yazi"
     state: directory
     mode: '0755'
 
 - name: Create a directory if it does not exist
   ansible.builtin.file:
-    path: {{ conf_path }}yazi/plugins/arrow.yazi
+    path: "{{ conf_path }}yazi/plugins/arrow.yazi"
     state: directory
     mode: '0755'
       
 - name: copy Yazi plugin (Smart Enter)
   copy:
     src: templates/smart-enter.yazi/init.lua.j2
-    dest: {{ conf_path }}yazi/plugins/smart-enter.yazi/init.lua
-    owner: {{ local_user }}
-    group: {{ local_user }}
+    dest: "{{ conf_path }}yazi/plugins/smart-enter.yazi/init.lua"
+    owner: "{{ local_user }}"
+    group: "{{ local_user }}"
 
 - name: copy Yazi plugin (Arrow)
   copy:
     src: templates/arrow.yazi/init.lua.j2
-    dest: {{ conf_path }}yazi/plugins/arrow.yazi/init.lua
-    owner: {{ local_user }}
-    group: {{ local_user }}
+    dest: "{{ conf_path }}yazi/plugins/arrow.yazi/init.lua"
+    owner: "{{ local_user }}"
+    group: "{{ local_user }}"
 
 - name: Install Yazi Mime plugin 
   ansible.builtin.git:
     repo: "https://github.com/DreamMaoMao/mime.yazi.git"
-    dest: {{ conf_path }}yazi/plugins/mime.yazi/
+    dest: "{{ conf_path }}yazi/plugins/mime.yazi/"
 
 - name: Install Yazi Glow plugin (Markdown viewer)
   ansible.builtin.git:
     repo: "https://github.com/Reledia/glow.yazi.git"
-    dest: {{ conf_path }}yazi/plugins/glow.yazi/
+    dest: "{{ conf_path }}yazi/plugins/glow.yazi/"
 
 - name: Install Yazi Miller plugin (CSV viewer)
   ansible.builtin.git:
     repo: "https://github.com/Reledia/miller.yazi.git"
-    dest: {{ conf_path }}yazi/plugins/miller.yazi/
+    dest: "{{ conf_path }}yazi/plugins/miller.yazi/"
 
 - name: Install Yazi Hexyl plugin (Binary viewer)
   ansible.builtin.git:
     repo: "https://github.com/Reledia/hexyl.yazi.git"
-    dest: {{ conf_path }}yazi/plugins/hexyl.yazi/
+    dest: "{{ conf_path }}yazi/plugins/hexyl.yazi/"
       
 - name: Install Yazi Ouch plugin (Archive viewer)
   ansible.builtin.git:
     repo: "https://github.com/ndtoan96/ouch.yazi.git"
-    dest: {{ conf_path }}yazi/plugins/ouch.yazi/
+    dest: "{{ conf_path }}yazi/plugins/ouch.yazi/"
 
 - name: Install Yazi Starship plugin (nice icons etc.)
   ansible.builtin.git:
     repo: "https://github.com/Rolv-Apneseth/starship.yazi.git"
-    dest: {{ conf_path }}yazi/plugins/starship.yazi/
+    dest: "{{ conf_path }}yazi/plugins/starship.yazi/"
 
