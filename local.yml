@@ -12,7 +12,6 @@
     - shell
     - hyprland
     - foot
-    #    - waybar
-    #    - greetd
-    #    - yazi
-    #    - users
+    - waybar
+    - greetd
+    - yazi
