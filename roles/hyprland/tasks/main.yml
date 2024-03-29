@@ -1,10 +1,3 @@
-#- name: "pacman -Syu as a separate step"
-#  become: true
-#  pacman:
-#    update_cache: yes
-#    upgrade: yes
-#
-
 - name: install hyprland packages 
   become: true
   package:
@@ -15,7 +8,7 @@
 - name: copy hyprland conf
   copy:
     src: files/hyprland.conf
-    dest: "/home/andreas/.config/hypr/hyprland.conf"
+    dest: "{{ conf_path }}/hypr/hyprland.conf"
     owner: andreas
     group: andreas
     backup: yes
@@ -23,35 +16,35 @@
 - name: copy vol.sh
   copy:
     src: files/vol.sh
-    dest: "/home/andreas/.config/hypr/sh/"
+    dest: "{{ conf_path }}/hypr/sh/"
     owner: andreas   
     group: andreas
 
 - name: copy toggle_waybar
   copy:
     src: files/toggle_waybar.sh
-    dest: "/home/andreas/.config/hypr/sh/"
+    dest: "{{ conf_path }}/hypr/sh/"
     owner: andreas   
     group: andreas   
 
 - name: copy set wallpaper
   copy:
     src: files/set-wallpaper.sh
-    dest: "/home/andreas/.config/hypr/sh/"
+    dest: "{{ conf_path }}/hypr/sh/"
     owner: andreas   
     group: andreas   
 
 - name: copy wallpapers
   copy:
     src: files/backgrounds
-    dest: "/home/andreas/.config/"
+    dest: "{{ conf_path }}/"
     owner: andreas   
     group: andreas   
 
 - name: configure mako
   copy:
     src: files/mako/config
-    dest: "/home/andreas/.config/mako/"
+    dest: "{{ conf_path }}/mako/"
     owner: andreas
     group: andreas
 

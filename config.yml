@@ -2,7 +2,8 @@
 update: true
 swapfile_path: /swapfile
 swapfile_size: 8G
-conf_path: "/home/andreas/.config/"
+home_path: "/home/andreas/"
+conf_path: "{{ home_path }}.config"
 
 base_packages:
   - sudo
