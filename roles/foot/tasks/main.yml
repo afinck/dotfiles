@@ -1,7 +1,7 @@
 - name: copy terminal emulator config
   copy:
     src: files/foot.ini
-    dest: "{{ conf_path }}/foot/"
+    dest: "{{ conf_path }}foot/"
     owner: andreas
     group: andreas
     mode: 0644

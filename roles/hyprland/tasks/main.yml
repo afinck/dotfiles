@@ -8,7 +8,7 @@
 - name: copy hyprland conf
   copy:
     src: files/hyprland.conf
-    dest: "{{ conf_path }}/hypr/hyprland.conf"
+    dest: "{{ conf_path }}hypr/hyprland.conf"
     owner: andreas
     group: andreas
     backup: yes
@@ -16,35 +16,35 @@
 - name: copy vol.sh
   copy:
     src: files/vol.sh
-    dest: "{{ conf_path }}/hypr/sh/"
+    dest: "{{ conf_path }}hypr/sh/"
     owner: andreas   
     group: andreas
 
 - name: copy toggle_waybar
   copy:
     src: files/toggle_waybar.sh
-    dest: "{{ conf_path }}/hypr/sh/"
+    dest: "{{ conf_path }}hypr/sh/"
     owner: andreas   
     group: andreas   
 
 - name: copy set wallpaper
   copy:
     src: files/set-wallpaper.sh
-    dest: "{{ conf_path }}/hypr/sh/"
+    dest: "{{ conf_path }}hypr/sh/"
     owner: andreas   
     group: andreas   
 
 - name: copy wallpapers
   copy:
     src: files/backgrounds
-    dest: "{{ conf_path }}/"
+    dest: "{{ conf_path }}"
     owner: andreas   
     group: andreas   
 
 - name: configure mako
   copy:
     src: files/mako/config
-    dest: "{{ conf_path }}/mako/"
+    dest: "{{ conf_path }}mako/"
     owner: andreas
     group: andreas
 

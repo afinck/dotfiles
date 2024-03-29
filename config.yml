@@ -4,7 +4,7 @@ swapfile_path: /swapfile
 swapfile_size: 8G
 local_user: "andreas"
 home_path: "/home/andreas/"
-conf_path: "{{ home_path }}.config"
+conf_path: "{{ home_path }}.config/"
 
 base_packages:
   - sudo

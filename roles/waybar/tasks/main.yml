@@ -2,7 +2,7 @@
 - name: Copy waybar config
   copy:
     src: files/config.jsonc
-    dest: "{{ conf_path }}/waybar/"
+    dest: "{{ conf_path }}waybar/"
     owner: andreas
     group: andreas
     mode: 0644
@@ -10,7 +10,7 @@
 - name: Copy waybar style
   copy:
     src: files/style.css
-    dest: "{{ conf_path }}/waybar/"
+    dest: "{{ conf_path }}waybar/"
     owner: andreas
     group: andreas
     mode: 0644
