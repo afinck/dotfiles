@@ -1,6 +1,7 @@
+---
 - name: Install Yazi catppuccin themes
   ansible.builtin.git:
-    repo: "https://github.com/catppuccinyazi.git"
+    repo: "https://github.com/catppuccin/yazi.git"
     dest: "{{ conf_path }}yazi/"
 
 - name: Install Yazi flavors
