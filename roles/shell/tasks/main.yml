@@ -1,7 +1,7 @@
 - name: Writing bashrc
   template: 
     src: bashrc.j2 
-    dest: "/home/andreas/.bashrc"
+    dest: "{{ home_path }}.bashrc"
     owner: andreas
     group: andreas
     mode: 0644
@@ -9,11 +9,11 @@
 - name: Writing aliases
   template: 
     src: aliases.j2
-    dest: "/home/andreas/.aliases"
+    dest: "{{ home_path }}.aliases"
     group: andreas
     mode: 0644
 
 - name: Install NvChad Neovim 
   ansible.builtin.git:
     repo: "https://github.com/NvChad/starter.git"
-    dest: /home/andreas/.config/nvim/
+    dest: {{ conf_path }}/nvim/

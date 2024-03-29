@@ -9,10 +9,10 @@
   roles:
     - aur
     - base
-    #    - users
-    #    - shell
-    # - hyprland
+    - shell
+    - hyprland
     - foot
     #    - waybar
     #    - greetd
     #    - yazi
+    #    - users
