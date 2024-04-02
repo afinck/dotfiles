@@ -17,3 +17,18 @@
   ansible.builtin.git:
     repo: "https://github.com/NvChad/starter.git"
     dest: "{{ conf_path }}nvim/"
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: "{{ conf_path }}tmux/"
+    state: directory
+    mode: '0755'
+
+- name: copy tmux config
+  copy:
+    src: files/tmux.j2
+    dest: "{{ conf_path }}tmux/tmux.conf"
+    owner: andreas
+    group: andreas
+    mode: 0644
+

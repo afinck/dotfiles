@@ -18,6 +18,7 @@ base_packages:
   - pulseaudio
   - git
   - bash-completion
+  - clang
 
 hyprland_packages:
   - alsa-utils
@@ -56,6 +57,7 @@ aur_packages:
   - nitch
   - swww
   - actkbd
+  - wlogout
 
 other_packages:
   - ripgrep
@@ -93,17 +95,15 @@ other_packages:
   - aria2
   - yay
   - pass
-  - spotify
-  - spotify-adblock-git
   - yt-dlp
   - ntfs-3g
   - btop
   - geary
   - browserpass-firefox
-  - browserpass-chromium
   - tmux
   - bc
   - p7zip
+  - ncspot
 
 services_list:
   - sshd
